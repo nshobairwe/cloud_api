@@ -5,7 +5,7 @@ import time
 import requests
 
 # Cloud endpoint to receive ping results
-cloud_url = "https://cloud-api-2bfb.onrender.com/api/ping"  # Adjust if your endpoint differs
+cloud_url = "https://cloud-api-pne7.onrender.com/api/ping"  # Adjust if your endpoint differs
 ping_interval = 5  # seconds between ping rounds
 
 # Define regions with WAN, Gateway, and LAN IPs
