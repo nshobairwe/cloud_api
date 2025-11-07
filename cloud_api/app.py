@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 ping_results = {}  # stores incoming results from clients
 
 @app.route("/")
@@ -10,7 +13,7 @@ def dashboard_web():
 @app.route("/api/ping", methods=["POST"])
 def receive_ping():
     global ping_results
-    ping_results = request.get_json()   # update stored results
+    ping_results = request.get_json()  # update stored results
     return jsonify({"message": "received"}), 200
 
 @app.route("/dashboard", methods=["GET"])
