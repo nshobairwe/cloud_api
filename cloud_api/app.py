@@ -5,7 +5,12 @@ ping_results = {}
 
 @app.route('/')
 def index():
+    return render_template('dashboard.html')
+
+@app.route('/index')
+def index():
     return render_template('index.html')
+
 
 @app.route('/api/ping', methods=['POST'])
 def update_ping():
